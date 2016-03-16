@@ -16,3 +16,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: "views/about.html"
     });
 });
+
+app.controller('jobsCtrl', function($scope){
+  $scope.selected = 0;
+
+  $scope.show = function(selected){
+    console.log(selected);
+  }
+})
