@@ -5,105 +5,109 @@
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
   <title>Vildan Tursic</title>
 
-  <link rel="icon" href="images/vildan.jpg" type="image/jpg" sizes="16x16">
-  <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script></script> -->
-
-  <!-- 1. Load platform support before any code that touches the DOM. -->
-  <link rel="import" href="bower_components/polymer/polymer.html">
-  <link rel="import" href="bower_components/font-roboto/roboto.html">
-
-  <!-- Paper Elements -->
-  <link rel="import" href="bower_components/paper-toolbar/paper-toolbar.html">
-  <link rel="import" href="bower_components/paper-card/paper-card.html">
-  <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
-  <link rel="import" href="bower_components/paper-button/paper-button.html">
-  <link rel="import" href="bower_components/paper-ripple/paper-ripple.html">
-  <link rel="import" href="bower_components/paper-drawer-panel/paper-drawer-panel.html">
-  <link rel="import" href="bower_components/paper-item/paper-item.html">
-  <link rel="import" href="bower_components/paper-fab/paper-fab.html">
-  <link rel="import" href="bower_components/paper-progress/paper-progress.html">
-  <link rel="import" href="bower_components/paper-spinner/paper-spinner.html">
-  <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
-
-  <!-- Iron Elements -->
-  <link rel="import" href="bower_components/iron-icon/iron-icon.html">
-  <link rel="import" href="bower_components/iron-icons/iron-icons.html">
-  <link rel="import" href="bower_components/iron-image/iron-image.html">
-  <link rel="import" href="bower_components/iron-menu-behavior/iron-menu-behavior.html">
-  <link rel="import" href="bower_components/iron-pages/iron-pages.html">
-
-
-  <!-- Loaded element components -->
-  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="scripts/css/main.css" media="screen" title="no title" charset="utf-8">
-
+  <link rel="icon" href="images/vildan.jpeg" type="image/jpg" sizes="16x16">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body unresolved>
+<body>
+  <header class="bg-lime-100 py-4 px-6 lg:px-12 shadow-md h-16 fixed top-0 w-full">
+    <nav class="text-center lg:text-left">
+        <h1 class="font-bold text-2xl">Vildan Tursic</h1>
+    </nav>
+  </header>
 
-  <style is="custom-style" media="screen">
+  <main class="p-6 lg:p-12 mt-16 grid grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 min-h-[calc(100vh-4rem)]">
+    <section class="overflow-hidden rounded-lg p-6 bg-zinc-100 shadow-lg" id="home">
+      <h2 class="font-bold mb-4">About me</h2>
+      <p><strong>Full Stack</strong> Software Engineer</p>
+      <p><strong>11</strong> years of experience</p>
+      <p>Currently working @ <strong><a href="https://symphony.is/">Symphony.is</a></strong></p>
+    </section>
 
-    paper-toolbar {
-      --paper-toolbar-background: #03A9F4;
-    }
-
-    paper-drawer-panel {
-      --paper-drawer-panel-main-container: {
-        overflow-y: scroll;
-      }
-
-    }
-  </style>
-
-  <div id="loading">
-    <paper-spinner class="loading" active></paper-spinner>
-  </div>
-
-  <paper-drawer-panel id="body">
-    <paper-header-panel drawer>
-      <paper-toolbar>
-        <div class="title"></div>
-      </paper-toolbar>
+    <section class="overflow-hidden rounded-lg p-6 bg-zinc-100 shadow-lg" id="about">
+      <h2 class="font-bold mb-4">What I work with</h2>
       <div>
-        <paper-item>About</paper-item>
-        <paper-item>Contact</paper-item>
-      </div>
-    </paper-header-panel>
-    <paper-header-panel main>
-      <paper-toolbar>
-        <paper-icon-button icon="menu" on-tap="menuAction" paper-drawer-toggle></paper-icon-button>
-        <div class="title">Vildan Tursic</div>
-        <paper-icon-button icon="more-vert" on-tap="moreAction"></paper-icon-button>
-      </paper-toolbar>
-      <div>
-        <div class="main-content">
-          <div ui-view></div>
+        <div class="grid grid-cols-3 lg:grid-cols-6 gap-4">
+          <div class="rounded-lg bg-orange-200">JavaScript</div>
+          <div class="rounded-lg bg-orange-200">TypeScript</div>
+          <div class="rounded-lg bg-orange-200">TypeScript</div>
+          <div class="rounded-lg bg-orange-200">TypeScript</div>
+          <div class="rounded-lg bg-orange-200">TypeScript</div>
+          <div class="rounded-lg bg-orange-200">TypeScript</div>
+          <div class="rounded-lg bg-orange-200">TypeScript</div>
         </div>
+        <ul class="list-disc pl-4 mb-4">
+          <li>
+            <p>JavaScript / TypeScript</p>
+            <ul class="list-disc pl-4">
+              <li>React</li>
+              <li>Next.js</li>
+              <li>Node.js</li>
+            </ul>
+          </li>
+          <li>
+            <p>Rust</p>
+            <ul class="list-disc pl-4">
+              <li>Tauri</li>
+              <li>Axum</li>
+            </ul>
+          </li>
+          <li>
+            <p>Python</p>
+          </li>
+          <li>
+            <p>Flutter</p>
+          </li>
+        </ul>
 
-        <!-- ///////////// FOOTER ///////////// -->
-        <footer>
-          <a href="https://icons8.com">Icon pack by Icons8</a>
-        </footer>
+        <p>And all other interesting languages and stacks!</p>
       </div>
-    </paper-header-panel>
-  </paper-drawer-panel>
+    </section>
 
-  <!-- /////////////// SCRIPTS //////////////// -->
-  <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcm11J5xna3NMNAvuXOLF8Yj83DrKlv8I&callback=initMap"></script> -->
+    <section class="overflow-hidden rounded-lg p-6 bg-zinc-100 shadow-lg" id="projects">
+      <h2 class="font-bold mb-4">Projects</h2>
+      <div>
+        <ul>
+          <li>
+            <h3>Project 1</h3>
+            <p>Project 1 description</p>
+          </li>
+          <li>
+            <h3>Project 2</h3>
+            <p>Project 2 description</p>
+          </li>
+          <li>
+            <h3>Project 3</h3>
+            <p>Project 3 description</p>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-  <script src="bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
-  <script src="bower_components/angular/angular.min.js" charset="utf-8"></script>
-  <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js" charset="utf-8"></script>
+    <section class="overflow-hidden rounded-lg p-6 bg-zinc-100 shadow-lg" id="contact">
+      <h2 class="font-bold mb-4">Contacts / Pages</h2>
+      <div class="flex flex-wrap w-full">
+        <div class="m-1 rounded-full px-2 bg-orange-200 border border-orange-400">
+          <p><a href="mailto:vildantursic@hotmail.com">vildantursic@hotmail.com</a></p>
+        </div>
+        <div class="m-1 rounded-full px-2 bg-orange-200 border border-orange-400">
+          <p><a href="mailto:vildan.tursic@symphony.is">vildan.tursic@symphony.is</a></p>
+        </div>
+        <div class="m-1 rounded-full px-2 bg-orange-200 border border-orange-400">
+          <p><a href="tel:+38761701198">+38761701198</a></p>
+        </div>
+        <div class="m-1 rounded-full px-2 bg-orange-200 border border-orange-400">
+          <p><a href="https://www.linkedin.com/in/vildan-tursic/">Linkedin</a></p>
+        </div>
+        <div class="m-1 rounded-full px-2 bg-orange-200 border border-orange-400">
+          <p><a href="https://github.com/vildantursic">Github</a></p>
+        </div>
+        <div class="m-1 rounded-full px-2 bg-orange-200 border border-orange-400">
+          <p><a href="https://codepen.io/vildantursic">Codepenio</a></p>
+        </div>
+      </div>
+  
+  </main>
 
-  <script type="text/javascript" src="scripts/app/app.js"></script>
-  <script type="text/javascript" src="scripts/js/main.js"></script>
-
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('#body').show();
-      $('#loading').hide();
-    });
-  </script>
-
+  <script type="text/javascript" src="scripts/main.js"></script>
 </body>
 </html>
